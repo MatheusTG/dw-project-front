@@ -1,0 +1,32 @@
+.loginContainer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(71.17deg, #4000fe 19.35%, #884dff 90.12%);
+  height: 100vh;
+}
+
+.loginContent {
+  background-color: white;
+  border-radius: 1.75rem;
+  max-width: 36rem;
+  min-width: 36rem;
+  padding: 2.5rem;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 2rem;
+  color: black;
+  position: relative;
+  margin-left: 1rem;
+  text-align: center;
+}
+
+.title::before {
+  content: "";
+  display: block;
+  height: 2rem;
+  width: 6px;
+  background: linear-gradient(71.17deg, #4000fe 19.35%, #884dff 90.12%);
+}
