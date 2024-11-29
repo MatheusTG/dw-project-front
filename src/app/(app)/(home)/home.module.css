@@ -1,0 +1,12 @@
+.home {
+  padding: 1rem;
+}
+
+.welcome {
+  font-size: 1.5rem;
+}
+
+.username {
+  font-weight: 600;
+  text-transform: capitalize;
+}
