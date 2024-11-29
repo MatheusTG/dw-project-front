@@ -5,7 +5,6 @@ import styles from './login.module.css';
 
 export default function LoginPage() {
   const [state, action, pending] = useActionState(login, { ok: false, data: null, message: null });
-  console.log(state, pending);
 
   if (state.ok) {
     location.href = '/';
@@ -28,11 +27,12 @@ export default function LoginPage() {
             <label htmlFor="password">Password</label>
             <input type="password" id="password" name="password" placeholder="Enter your passeword" />
           </div>
-          <button type="submit">SIGN IN</button>
+          <button type="submit">{pending ? 'Signing in...' : 'SIGN IN'}</button>
 
           <p>
             Forgot your password? <a>Reset Password</a>
           </p>
+          <p className={styles.login_message}>{!state.ok && state.message}</p>
         </form>
       </article>
     </main>

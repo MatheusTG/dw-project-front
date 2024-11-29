@@ -1,0 +1,35 @@
+.user {
+  font-size: 0.96rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.user > .user_icon {
+  color: #333;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.user > .user_icon:hover {
+  color: #666;
+}
+
+.modal {
+  min-width: 12rem;
+  background-color: #c8caff;
+  padding: 0.5rem;
+  border: 1px solid #ccb3ff;
+  border-radius: 4px;
+  position: absolute;
+  top: -0.25rem;
+  right: -0.25rem;
+  transform: translate(100%, 100%);
+}
+
+.username {
+  color: #333;
+  text-transform: capitalize;
+  font-weight: 600;
+}
