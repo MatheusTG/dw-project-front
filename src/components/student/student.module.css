@@ -1,0 +1,21 @@
+.student {
+  width: 100%;
+  background-color: #eee;
+  color: #333;
+  display: grid;
+  grid-template-columns: 4rem 0.2fr 1fr 0.8fr 0.8fr 3.5rem;
+  cursor: pointer;
+}
+
+.student:hover {
+  background-color: #e6e6e6;
+}
+
+.student > * {
+  font-size: 0.92rem;
+  letter-spacing: 0.25px;
+  line-height: 1.5;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+}

@@ -11,10 +11,16 @@ export default function Layout({
     marginLeft: '6rem',
   };
 
+  const childrenStyle: CSSProperties = {
+    maxHeight: '100dvh',
+    display: 'grid',
+    gridTemplateRows: '3.75rem calc(100% - 3.75rem)',
+  };
+
   return (
     <main style={mainStyle}>
       <Navigation />
-      <div>
+      <div style={childrenStyle}>
         <Header />
         {children}
       </div>

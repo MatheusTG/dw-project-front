@@ -1,4 +1,6 @@
 .students {
+  display: grid;
+  grid-template-rows: auto 1fr;
   padding: 0 4rem;
   padding-bottom: 1rem;
 }
@@ -13,13 +15,27 @@
   gap: 1rem;
 }
 
+.title > h2 {
+  font-size: 1.375rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
 .title > button {
   color: #e6e6e6;
   background-color: #260080;
+  font-size: 1rem;
   font-weight: 700;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   border: 1px solid #260080;
   border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
   cursor: pointer;
   transition: 0.15s;
 }
@@ -28,8 +44,32 @@
   background-color: #4619b1;
 }
 
+.students_container {
+  overflow: auto;
+  display: grid;
+}
+
 .students_list {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.25rem;
+  border-radius: 4px;
+  overflow: auto;
+}
+
+.labels {
+  width: 100%;
+  color: #333;
+  display: grid;
+  grid-template-columns: 4rem 0.2fr 1fr 0.8fr 0.8fr 4rem;
+}
+
+.labels > span {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 0.25px;
+  padding: 0 1rem;
+  margin-bottom: 0.75rem;
 }
