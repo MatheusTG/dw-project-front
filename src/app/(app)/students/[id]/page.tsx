@@ -1,4 +1,4 @@
-import { getStudents } from '@/actions/data/get-students';
+import { getStudents } from '@/actions/data/students/get-students';
 
 type StudentPageProps = {
   params: Promise<{
@@ -10,7 +10,7 @@ export default async function StudentPage({ params }: StudentPageProps) {
   const { id } = await params;
   const { ok, data: students, message } = await getStudents(id);
 
-  if (!ok || !students?.length) return <div>{message || 'Nenhum aluno encontrado'}</div>;
+  if (!ok || !students?.length) return <div>{message || `Nenhum aluno como o id "${id}" encontrado.`}</div>;
 
   return (
     <div>

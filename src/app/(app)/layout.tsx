@@ -13,6 +13,7 @@ export default function Layout({
 
   const childrenStyle: CSSProperties = {
     maxHeight: '100dvh',
+    height: '100dvh',
     display: 'grid',
     gridTemplateRows: '3.75rem calc(100% - 3.75rem)',
   };
