@@ -16,6 +16,8 @@ export default function Student({ student }: { student: StudentType }) {
       <span>{student.nome}</span>
       <span>{student.email}</span>
       <span>{formatPhoneNumber(student.celular)}</span>
+      <div className='eye'><img src="./eye-3.svg" alt="" /></div>
+
       <StudentNavigation student={student} />
     </div>
   );
