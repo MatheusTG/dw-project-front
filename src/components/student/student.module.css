@@ -3,7 +3,7 @@
   background-color: #eee;
   color: #333;
   display: grid;
-  grid-template-columns: 4rem 0.2fr 1fr 0.8fr 0.8fr 5rem 0.25rem;
+  grid-template-columns: 4rem 0.225fr 1.16fr 1fr 0.8fr 6rem 4rem;
   align-items: center;
   cursor: pointer;
 }
