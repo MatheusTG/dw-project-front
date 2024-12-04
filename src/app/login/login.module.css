@@ -7,10 +7,10 @@
 }
 
 .loginContent {
-  background-color: white;
-  border-radius: 1.75rem;
-  max-width: 36rem;
-  min-width: 36rem;
+  background-color: #fafafa;
+  border-radius: 1rem;
+  max-width: 24rem;
+  min-width: 24rem;
   padding: 2.5rem;
 }
 
@@ -21,16 +21,94 @@
   position: relative;
   margin-left: 1rem;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .title::before {
   content: '';
-  display: block;
+  position: absolute;
+  left: 0;
   height: 2rem;
   width: 6px;
   background: linear-gradient(71.17deg, #4000fe 19.35%, #884dff 90.12%);
 }
 
+.subtitle {
+  font-size: 0.96rem;
+  color: #555;
+}
+
 .login_message {
   color: #ff0000;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.inputContainer > label {
+  font-size: 0.92rem;
+  color: #333;
+}
+
+.inputContainer > input {
+  font-size: 0.92rem;
+  padding: 0.45rem 0.5rem;
+  background-color: transparent;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+.helpers {
+  font-size: 0.86rem;
+  color: #555;
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.handlePassword {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.handlePassword > a {
+  color: #555;
+}
+
+.loginButton {
+  background-color: #4000fe;
+  border: 1px solid #999;
+  border-radius: 4px;
+  padding: 0.45rem 0.5rem;
+  color: #fafafa;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.showPasswords {
+  color: #333;
+  padding: 0.25rem;
+  background-color: #33333320;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: -0.5rem;
+  cursor: pointer;
+  transition: 0.15s;
 }

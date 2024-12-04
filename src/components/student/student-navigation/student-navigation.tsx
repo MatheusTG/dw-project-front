@@ -3,12 +3,14 @@
 import { StudentType } from '@/@types/data/student-type';
 import { EllipsisVertical, Pencil, Trash } from 'lucide-react';
 import { useState } from 'react';
+import DeleteStudent from '../delete-student/delete-student';
 import UpdateStudent from '../update-student/update-student';
 import styles from './student-navigation.module.css';
 
 export default function StudentNavigation({ student }: { student: StudentType }) {
   const [opened, setOpened] = useState(false);
   const [updateModalOpened, setUpdateModalOpened] = useState(false);
+  const [deleteModalOpened, setDeleteModalOpened] = useState(false);
 
   return (
     <>
@@ -36,7 +38,13 @@ export default function StudentNavigation({ student }: { student: StudentType })
           {opened && (
             <div className={styles.content}>
               <ul>
-                <li className={`${styles.item} ${styles.delete}`}>
+                <li
+                  className={`${styles.item} ${styles.delete}`}
+                  onClick={() => {
+                    setDeleteModalOpened(true);
+                    setOpened(false);
+                  }}
+                >
                   <Trash size={16} />
                   <span>Excluir</span>
                 </li>
@@ -56,6 +64,7 @@ export default function StudentNavigation({ student }: { student: StudentType })
         </div>
       </div>
       {updateModalOpened && <UpdateStudent student={student} setOpened={setUpdateModalOpened} />}
+      {deleteModalOpened && <DeleteStudent student={student} setOpened={setDeleteModalOpened} />}
     </>
   );
 }
