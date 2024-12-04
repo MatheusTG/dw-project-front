@@ -5,7 +5,7 @@ import { ReturnType } from '@/@types/return-type';
 
 export async function getStudents(id?: string): Promise<ReturnType<StudentType[]>> {
   try {
-    const res = await fetch(`http://localhost:3333/usuarios${id ? `/${id}` : ''}`);
+    const res = await fetch(`${process.env.API_URL}/usuarios${id ? `/${id}` : ''}`);
     const students: StudentType[] = await res.json();
 
     return { ok: true, data: students, message: null };

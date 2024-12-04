@@ -10,7 +10,7 @@ export async function deleteStudent(state: AddStudentType, formData: FormData): 
   try {
     const id = formData.get('id');
 
-    const res = await fetch(`http://localhost:3333/usuarios/${id}`, {
+    const res = await fetch(`${process.env.API_URL}/usuarios/${id}`, {
       method: 'DELETE',
       body: JSON.stringify({ id: id }),
       headers: {

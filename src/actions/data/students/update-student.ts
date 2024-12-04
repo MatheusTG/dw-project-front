@@ -16,7 +16,7 @@ export async function updateStudent(state: AddStudentType, formData: FormData): 
     if (!name || !email || !phoneNumber)
       return { ok: false, data: null, message: 'Todos os campos precisam ser preenchidos.' };
 
-    const res = await fetch(`http://localhost:3333/usuarios/${id}`, {
+    const res = await fetch(`${process.env.API_URL}/usuarios/${id}`, {
       method: 'PUT',
       body: JSON.stringify({ nome: name, email: email, celular: phoneNumber }),
       headers: {

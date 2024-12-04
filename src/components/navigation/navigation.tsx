@@ -23,15 +23,27 @@ export default function Navigation() {
           <GraduationCap size={20} />
           <span>Students</span>
         </Link>
-        <Link href="/" className={`${styles.link} ${pathname.includes('/course') ? styles.active : ''}`}>
+        <Link
+          href="/"
+          style={{ cursor: 'not-allowed', color: '#33333380' }}
+          className={`${styles.link} ${pathname.includes('/course') ? styles.active : ''}`}
+        >
           <Bookmark size={20} />
           <span>Course</span>
         </Link>
-        <Link href="/" className={`${styles.link} ${pathname.includes('/payment') ? styles.active : ''}`}>
+        <Link
+          href="/"
+          style={{ cursor: 'not-allowed', color: '#33333380' }}
+          className={`${styles.link} ${pathname.includes('/payment') ? styles.active : ''}`}
+        >
           <WalletMinimal size={20} />
           <span>Payment</span>
         </Link>
-        <Link href="/" className={`${styles.link} ${pathname.includes('/settings') ? styles.active : ''}`}>
+        <Link
+          href="/"
+          style={{ cursor: 'not-allowed', color: '#33333380' }}
+          className={`${styles.link} ${pathname.includes('/settings') ? styles.active : ''}`}
+        >
           <Settings size={20} />
           <span>Settings</span>
         </Link>
