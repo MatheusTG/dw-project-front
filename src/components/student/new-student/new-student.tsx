@@ -22,7 +22,7 @@ export default function NewStudent() {
       {opened && (
         <div>
           <div
-            className="modal_bg"
+            className={styles.bg}
             onClick={e => {
               e.stopPropagation();
               setOpened(false);

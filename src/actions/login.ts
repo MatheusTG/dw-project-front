@@ -12,7 +12,7 @@ export async function login(state: LoginReturnType, formData: FormData): Promise
 
   if (!login) return { ok: false, data: null, message: 'O campo Login precisa ser Preenchido!' };
 
-  if ((login === 'amanda' || login === 'matheus' || login === 'valmir') && password === '123') {
+  if ((login === 'amanda' || login === 'matheus' || login === 'valmir' || login === 'admin') && password === '123') {
     (await cookies()).set('auth-token', `${login}:${password}`, {
       httpOnly: true,
     });

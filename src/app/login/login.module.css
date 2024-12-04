@@ -8,7 +8,9 @@
 
 .loginContent {
   background-color: #fafafa;
+  border: 1px solid #eee;
   border-radius: 1rem;
+  box-shadow: 0 0 16px 4px #00000030;
   max-width: 24rem;
   min-width: 24rem;
   padding: 2.5rem;
@@ -16,10 +18,9 @@
 
 .title {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.75rem;
   color: black;
   position: relative;
-  margin-left: 1rem;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -40,6 +41,7 @@
 
 .login_message {
   color: #ff0000;
+  font-size: 0.86rem;
 }
 
 .loginForm {
@@ -64,8 +66,13 @@
   font-size: 0.92rem;
   padding: 0.45rem 0.5rem;
   background-color: transparent;
-  border: 1px solid #999;
+  border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+.inputContainer > input::placeholder {
+  font-size: 0.9rem;
+  color: #999;
 }
 
 .helpers {
@@ -89,7 +96,7 @@
 
 .loginButton {
   background-color: #4000fe;
-  border: 1px solid #999;
+  border: 1px solid #ccc;
   border-radius: 4px;
   padding: 0.45rem 0.5rem;
   color: #fafafa;
@@ -100,7 +107,6 @@
 
 .showPasswords {
   color: #333;
-  padding: 0.25rem;
   background-color: #33333320;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -109,6 +115,8 @@
   justify-content: center;
   gap: 1rem;
   margin-top: -0.5rem;
+  padding: 0.45rem 0.5rem;
+  font-weight: 700;
   cursor: pointer;
   transition: 0.15s;
 }
